@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #DEDFDC;
+}
+
+/* NAVBAR */
+
+nav {
+    background-color: #eff5e4;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: static;
+}
+
+#navlogo {
+    height: 70px;
+}
+
+.section {
+    padding-left: 50px;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+}
+
+.section a {
+    color: black;
+    font-size: large;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.menu-btn{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.nava:hover {
+    color: aquamarine;
+    text-decoration: underline;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 600px;
+    padding: 20px;
+}
+
+.heroleft {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.heroright {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heroimg {
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid black;
+    border-radius: 50%;
+    box-shadow: 0px 20px 10px black;
+}
+
+.heroleft div {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+}
+
+.heroleft button {
+    width: 130px;
+    height: 35px;
+    background: #2f70e1;
+    border: 1px solid black;
+    font-size: small;
+    border-radius: 5px;
+}
+
+.heroleft button a {
+    color: wheat;
+    text-decoration: none;
+    font-size: small;
+    font-weight: bold;
+}
+
+.herobtn {
+    padding-top: 20px;
+}
+
+.heropara p {
+    font-size: large;
+}
+
+.herohover {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.herohover:hover {
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.2);    
+}
+
+
+/* MOBILE HERO */
+
+@media (max-width:768px){
+
+.hero{
+    flex-direction: column;
+    text-align: center;
+}
+
+.heroleft{
+    width: 100%;
+    align-items: center;
+}
+
+.heroright{
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+#heroimg{
+    max-width: 300px;
+}
+
+}
+
+
+/* ************************* */
+/* --- डेस्कटॉप व्यू (बड़ी स्क्रीन) के लिए --- */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: #eff5e4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.section {
+    display: flex; /* डेस्कटॉप पर लिंक्स साथ-साथ दिखेंगे */
+    gap: 30px;
+    align-items: center;
+}
+
+.section a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu-btn, .close-btn {
+    display: none; /* डेस्कटॉप पर बटन और X को छुपा दें */
+}
+
+/* --- मोबाइल व्यू (768px से कम) के लिए --- */
+@media (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .menu-btn {
+        display: block; /* मोबाइल पर हैमबर्गर दिखेगा */
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .section {
+        display: none; /* शुरू में छुपा रहेगा */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white; /* वीडियो जैसा लुक */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+    }
+
+    .section.show {
+        display: flex; /* JS से क्लिक करने पर खुलेगा */
+    }
+
+    .section a {
+        font-size: 24px; /* मोबाइल पर बड़े अक्षर */
+        margin: 15px 0;
+    }
+
+    .close-btn {
+        display: block; /* मोबाइल पर X दिखेगा */
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 35px;
+        cursor: pointer;
+    }
+}
+
+.section a:hover {
+    color: #2f70e1;
+    border-bottom: 2px solid #2f70e1;
+}
+
+/* *************About *************  */
+
+.about {
+    /* border: 1px solid black; */
+    width: 100%;
+    min-height: 270px;
+    background-color: aliceblue;
+    
+}
+
+.about h1 {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.aboutmain {
+    /* border: 1px solid black; */
+    min-height: 220px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutcenter {
+    /* border: 1px solid black; */
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    text-align: center;
+    width: 65%;
+    height: 45%;
+}   
+
+@media  (max-width: 768px){
+    .aboutcenter{
+        text-align: start;
+    }
+}
+/* ***************Contect*  *************  */
+
+.contect {
+    width: 100%;
+    min-height: 300px;
+}
+
+.contect h1 {
+    text-align: center;
+}
+.contect h3 {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.contectme {
+    height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.cinsta {
+    height: 27px;
+    width: 80px;
+    background-color: #2f70e1;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0.2px solid black;
+    /* color: wheat; */
+}
+
+.cinsta a {
+    color: #DEDFDC;
+    text-decoration: none;
+}
+
+.mode {
+    height: 100%;
+    max-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#light {
+    display: none;
+    border: none;
+}
+#light img {
+    max-width: 80px;
+    height: 30px;
+    border-radius: 20px;
+}
+#dark {
+    border: none;
+}
+
+#dark img {
+    max-width: 80px;
+    height: 30px;
+    border-radius: 20px;
+}
